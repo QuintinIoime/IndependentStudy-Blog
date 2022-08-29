@@ -1,0 +1,15 @@
+---
+layout: navbar.njk
+title: Home
+---
+<h1 class="text-3xl">Recent Posts</h1>
+<hr class="my-4">
+{%- for post in collections.post reversed -%}
+    <article class="my-8 prose prose-slate">
+        <h3>{{ post.data.title }}</h3>
+        <p>{{ post.data.date | postDate }}</p>
+        <p>{{ post.data.description }}</p>
+        <a href={{ post.url }}>Read more...</a>
+    </article>
+    <hr class="my-4">
+{%- endfor -%}

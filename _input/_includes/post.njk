@@ -1,0 +1,20 @@
+---
+layout: navbar.njk
+---
+<!doctype html>
+<html>
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/css/style.css" rel="stylesheet">
+    </head>
+    <body>
+        <article class="prose prose-slate mx-auto">
+            <hr>
+            <h1>{{title}}</h1>
+            <p>{{ date | postDate }}</p>
+            {{ content | safe }}
+            <hr>
+        </article>
+    </body>
+</html>
