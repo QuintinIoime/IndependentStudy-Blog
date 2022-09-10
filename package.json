@@ -21,7 +21,9 @@
   "homepage": "https://github.com/QuintinIoime/IndependentStudy-Blog#readme",
   "devDependencies": {
     "@11ty/eleventy": "^1.0.2",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^4.1.0",
     "@tailwindcss/typography": "^0.5.4",
+    "markdown-it-attrs": "^4.1.4",
     "tailwindcss": "^3.1.8"
   },
   "dependencies": {
