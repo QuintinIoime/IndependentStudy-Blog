@@ -77,6 +77,6 @@ function handler(event) {
 ```
 4. ![Cloudfront Public function](/images/Week1-Cloudfront-publishfunction.png) Then click the publish tab and click the "Publish function" button.
 ### Cloudfront
-1. ![Cloudfront Create distribution](/images/Week1-Cloudfront-createdistribution.png) Go to the CloudFront distribution page and click the "Create Distribution" button
+1. ![Cloudfront Create distribution](/images/Week1-Cloudfront-Createdistribution.png) Go to the CloudFront distribution page and click the "Create Distribution" button
 2. For "Origin domain" choose the S3 bucket that we created as part of the Codepipeline. Under "Origin access" select "Legacy access identities", and click "Yes, update the bucket policy". Then click the "Create new OAI" button, and create. Under the "Default cache behavior" section select "Redirect HTTP to HTTPS". Under "Function associations" under Viewer request click "Cloudfront Functions" and select the function we created before. Then under "Settings" click "Use only North America and Europe" to reduce costs. Then click "Create distribution"
 > That's it! Now just wait until the distribution is deployed. Then you can click the distribution domain name to view your website content!
