@@ -6,7 +6,6 @@ date: 2022-10-10 09:00:00 -4
 description: This week I discuss the changes being made to the course and what is coming next.
 ---
 ![API Guide](/images/week3/api_xkcd.png)
-# DRAFT ------ NOT TO BE PUBLISHED
 ## A Fresh Start
 Welcome back. You may have noticed that there has been a 2 week gap in posts. During this time I did some reflecting on what I want to get out of the course and realized that the previous week's style of post was uninspired, boring, and unsustainable. So for the future, starting with today's post, I will be moving away from just summarizing what I have learned each week, and instead work on applying what I have learned into a project that will be worked on throughout the semester.
 
