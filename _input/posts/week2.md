@@ -5,7 +5,7 @@ title: All About EC2
 date: 2022-09-17 09:00:00 -4
 description: This week I discuss what I have learned about one of AWS's core services, EC2.
 ---
-![Daddy, what are clouds made of? Linux servers, mostly](/images/week2/Week2-Clouds.jpg)
+![Daddy, what are clouds made of? Linux servers, mostly](/images/Week2/Week2-Clouds.jpg)
 
 ## Week 2
 This week I learned a lot about one of AWS's original services when it was launched in 2006, EC2 or Elastic Compute Cloud.

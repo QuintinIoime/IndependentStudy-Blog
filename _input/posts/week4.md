@@ -5,18 +5,18 @@ title: Final
 date: 2022-12-15 09:00:00 -4
 description: This week I wrap up the project and reflect on the independent study.
 ---
-![Dilbert](/images/week4/dilbert.gif)
+![Dilbert](/images/Week4/dilbert.gif)
 
 ## Frontend
 In the last post I was able to get the AWS Backend of sending the email working. However, this would not be a very usable program unless website owners had a chance to view the responses of their form in something other than an email. This would be helpful incase some of the responses get lost, or the website owner simply does not see them. Therefore, the main goal for this frontend was to show the owner their forms and their associated responses.
 
 ### Angular
 To create this web frontend I used the Angular framework. Angular allows me to create neat, reusable components and has graphic libraries that allow me to create functional user interfaces really quickly. Angular also comes bundled with functions that allow me to send GET and POST requests to servers like AWS Api Gateway. Here is what my Frontend design ended up looking like: 
-![Frontend](/images/week4/frontend.png)
+![Frontend](/images/Week4/frontend.png)
 
 The section on the left labeled "Forms" allows the user to see all of the available forms they have created. Clicking on one of these forms will make it selected and display all the form responses on the right with the timestamp from when the form was submitted. Clicking on one of these forms will show the user the specific form response that was submitted.
 
-![Popup](/images/week4/popup.png)
+![Popup](/images/Week4/popup.png)
 
 Here is an example from what a form response could look like. It is important to note that the information included in the email will be the exact same information that is included in the form response. 
 

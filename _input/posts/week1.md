@@ -16,17 +16,17 @@ As for the website frontend, I am currently using [11ty](https://www.11ty.dev/),
 1. Fork the [Blog Template](https://github.com/QuintinIoime/BlogTemplate/fork) into your own GitHub account.
 > That's it! You can test to see what the site looks like locally by running the `npm install & npm run build` command. Your website will appear in the _output folder!
 ## Pipeline
-![GitHub -> AWS CodePipeline -> AWS S3](/images/week1/Week1-Pipeline.svg)
+![GitHub -> AWS CodePipeline -> AWS S3](/images/Week1/Week1-Pipeline.svg)
 For this website to work, it needs to somehow get into the cloud. For this we will be using AWS CodePipeline, a continuous integration and deployment tool that will connect with GitHub to automate our deployments. Any change that is detected in GitHub will trigger the CodePipeline and subsequent building and deployment of our application.
 ### Setup
-1. ![S3 Landing Page](/images/week1/Week1-BucketManagement.png) Go to [Amazon S3](https://s3.console.aws.amazon.com/s3/buckets?region=us-east-1) and click "Create Bucket"
-2. ![S3 Create Bucket](/images/week1/Week1-CreateBucket.png) Under "Bucket name" give the bucket a name. Make sure the region is "us-east-1". Then click "Create bucket"
-3. ![CodePipeline Landing Page](/images/week1/Week1-Codepipeline-landing.png) Go to the [AWS CodePipeline Page](https://us-east-1.console.aws.amazon.com/codesuite/codepipeline/start?region=us-east-1) and click the Create Pipeline button.
-4. ![CodePipeline Step 1](/images/week1/Week1-Codepipeline-step1.png) Fill in a pipeline name and select "New service role". Click the next button.
-5. ![CodePipeline Step 2](/images/week1/Week1-Codepipeline-step2.png) Make sure to select "Github (Version 2)" as your source provider. More settings should now pop up. Under "Connection", click the "Connect to GitHub" button and sign in to your GitHub account. Under "Repository name" put the repository that you forked and under "Branch name" put the main branch. Make sure "Start the pipeline on source code change" is checked. Click the next button.
-6. ![CodePipeline Step 3](/images/week1/Week1-Codepipeline-step3.png) Under "Build provider" select AWS CodeBuild. Under "Project name" click the "Create project" button.
-7. ![CodePipeline Build Project](/images/week1/Week1-Codepipeline-buildproject.png) A new window should pop up. Under "Project name" name it `11ty_Build` since we are compiling an 11ty project.
-8. ![CodePipeline Build Project](/images/week1/Week1-Codepipeline-buildspec.png) Scroll down to Enviornment and for Operating System click "Amazon Linux 2" then under Runtime select "Standard" and under Image select "aws/codebuild/amazonlinux2-x86_64-standard:4.0". Scrolldown to buildspec and click the "Insert build commands" button. Click the "Switch to editor" button. Paste the following code and click "Continue to CodePipeline"
+1. ![S3 Landing Page](/images/Week1/Week1-BucketManagement.png) Go to [Amazon S3](https://s3.console.aws.amazon.com/s3/buckets?region=us-east-1) and click "Create Bucket"
+2. ![S3 Create Bucket](/images/Week1/Week1-CreateBucket.png) Under "Bucket name" give the bucket a name. Make sure the region is "us-east-1". Then click "Create bucket"
+3. ![CodePipeline Landing Page](/images/Week1/Week1-Codepipeline-landing.png) Go to the [AWS CodePipeline Page](https://us-east-1.console.aws.amazon.com/codesuite/codepipeline/start?region=us-east-1) and click the Create Pipeline button.
+4. ![CodePipeline Step 1](/images/Week1/Week1-Codepipeline-step1.png) Fill in a pipeline name and select "New service role". Click the next button.
+5. ![CodePipeline Step 2](/images/Week1/Week1-Codepipeline-step2.png) Make sure to select "Github (Version 2)" as your source provider. More settings should now pop up. Under "Connection", click the "Connect to GitHub" button and sign in to your GitHub account. Under "Repository name" put the repository that you forked and under "Branch name" put the main branch. Make sure "Start the pipeline on source code change" is checked. Click the next button.
+6. ![CodePipeline Step 3](/images/Week1/Week1-Codepipeline-step3.png) Under "Build provider" select AWS CodeBuild. Under "Project name" click the "Create project" button.
+7. ![CodePipeline Build Project](/images/Week1/Week1-Codepipeline-buildproject.png) A new window should pop up. Under "Project name" name it `11ty_Build` since we are compiling an 11ty project.
+8. ![CodePipeline Build Project](/images/Week1/Week1-Codepipeline-buildspec.png) Scroll down to Enviornment and for Operating System click "Amazon Linux 2" then under Runtime select "Standard" and under Image select "aws/codebuild/amazonlinux2-x86_64-standard:4.0". Scrolldown to buildspec and click the "Insert build commands" button. Click the "Switch to editor" button. Paste the following code and click "Continue to CodePipeline"
 ```yaml
 version: 0.2
 
